@@ -1,6 +1,6 @@
 {% set name = "python-cppcolormap" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "1b6e0213454e6a7432281224841466363c330d0c343ac1cbea4640c1be77fa27" %}
+{% set version = "0.2.3" %}
+{% set sha256 = "05df1df441d849f8c59915f09f66567bf5cf6cb366d38ee7cb325aa9c4f56b09" %}
 
 package:
   name: {{ name|lower }}
@@ -12,6 +12,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [win and vc<14]
   script:
     - python setup.py build
     - python setup.py install
