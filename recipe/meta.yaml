@@ -1,6 +1,6 @@
 {% set name = "python-cppcolormap" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "05df1df441d849f8c59915f09f66567bf5cf6cb366d38ee7cb325aa9c4f56b09" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "d1625bc1855315fa5eeeac2c6a2b891da25d7c82ffd3e73d8c455ff5cac4ac22" %}
 
 package:
   name: {{ name|lower }}
@@ -13,9 +13,7 @@ source:
 build:
   number: 0
   skip: True  # [win and vc<14]
-  script:
-    - python setup.py build
-    - python setup.py install
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
@@ -23,6 +21,7 @@ requirements:
   host:
     - python
     - setuptools
+    - pip
     - pyxtensor
   run:
     - python
@@ -36,8 +35,8 @@ about:
   license: GPL3
   license_family: GPL3
   license_file: LICENSE
-  summary: 'Library with colormaps for C++/Python.'
-  description: 'Library with colormaps for C++/Python.'
+  summary: 'Library with colormaps.'
+  description: 'Library with colormaps.'
   doc_url: https://github.com/tdegeus/cppcolormap
   dev_url: https://github.com/tdegeus/cppcolormap
 
