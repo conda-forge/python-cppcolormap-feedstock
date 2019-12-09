@@ -13,9 +13,7 @@ source:
 build:
   number: 0
   skip: True  # [win and vc<14]
-  script:
-    - python setup.py build
-    - python setup.py install
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
@@ -23,6 +21,7 @@ requirements:
   host:
     - python
     - setuptools
+    - pip
     - pyxtensor
   run:
     - python
@@ -36,8 +35,8 @@ about:
   license: GPL3
   license_family: GPL3
   license_file: LICENSE
-  summary: 'Library with colormaps for C++/Python.'
-  description: 'Library with colormaps for C++/Python.'
+  summary: 'Library with colormaps.'
+  description: 'Library with colormaps.'
   doc_url: https://github.com/tdegeus/cppcolormap
   dev_url: https://github.com/tdegeus/cppcolormap
 
