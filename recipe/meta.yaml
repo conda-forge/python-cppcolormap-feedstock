@@ -1,6 +1,6 @@
 {% set name = "python-cppcolormap" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "d1625bc1855315fa5eeeac2c6a2b891da25d7c82ffd3e73d8c455ff5cac4ac22" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "62226f94904f63ecac34edaa2e1a914862cd1e8f5169525bbc64b2c40fe6f9d9" %}
 
 package:
   name: {{ name|lower }}
