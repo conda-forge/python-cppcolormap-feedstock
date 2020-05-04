@@ -32,8 +32,7 @@ test:
 
 about:
   home: https://github.com/tdegeus/cppcolormap
-  license: GPL3
-  license_family: GPL3
+  license: GPL-3.0-or-later
   license_file: LICENSE
   summary: Library with colormaps.
   description: Library with colormaps.
